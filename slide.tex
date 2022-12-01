@@ -58,15 +58,17 @@
 \newtheorem*{remark}{Remark}
 \theoremstyle{definition}
 
-\newcommand{\empy}[1]{{\color{darkorange}\emph{#1}}}
-\newcommand{\empr}[1]{{\color{cardinalred}\emph{#1}}}
-\newcommand{\examplebox}[2]{
-\begin{tcolorbox}[colframe=darkcardinal,colback=boxgray,title=#1]
-#2
-\end{tcolorbox}}
+%\newcommand{\empy}[1]{{\color{darkorange}\emph{#1}}}
+%\newcommand{\empr}[1]{{\color{cardinalred}\emph{#1}}}
+%\newcommand{\examplebox}[2]{
+%\begin{tcolorbox}[colframe=darkcardinal,colback=boxgray,title=#1]
+%#2
+%\end{tcolorbox}}
 
-\usetheme{Stanford} 
-\input{./style_files_stanford/my_beamer_defs.sty}
+%\usetheme{Stanford} 
+%\input{./style_files_stanford/my_beamer_defs.sty}
+\usetheme{Copenhagen}
+\usecolortheme{seahorse}
 \logo{\includegraphics[height=0.5in]{logos/HUS-name.jpg}}
 
 \makeatletter
@@ -116,9 +118,9 @@
 	\vskip 3pt
 }
 
-\begin{noheadline}
+%\begin{noheadline}
 \begin{frame} \maketitle \end{frame}
-\end{noheadline}
+%\end{noheadline}
     
 \setbeamertemplate{itemize items}[default]
 \setbeamertemplate{itemize subitem}[circle]
