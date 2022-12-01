@@ -1,0 +1,138 @@
+%% This Beamer template is based on the one found here: https://github.com/sanhacheong/stanford-beamer-presentation, and edited to be used for Stanford ARM Lab
+
+\documentclass[10pt]{beamer}
+%\mode<presentation>{}
+
+\usepackage{media9}
+\usepackage{amssymb,amsmath,amsthm,enumerate}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage[utf8]{vietnam}
+\usepackage{graphicx,animate}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{amsfonts,amscd}
+\usepackage[]{units}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tcolorbox}
+\usepackage{physics}
+\usepackage{movie15}
+% Enable colored hyperlinks
+\hypersetup{colorlinks=true}
+
+% The following three lines are for crossmarks & checkmarks
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+% Numbered captions of tables, pictures, etc.
+\setbeamertemplate{caption}[numbered]
+\usepackage{media9} 
+%\usepackage[superscript,biblabel]{cite}
+%\usepackage{algorithmic}
+%\usepackage{algorithm2e}
+%\usepackage{algpseudocode}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{caption}
+%\usepackage{xcolor}
+\usepackage{array}
+%\renewcommand{\thealgocf}{}
+
+\usepackage[natbib,backend=biber,style=ieee, sorting=ynt]{biblatex}
+\bibliography{ref.bib}
+
+\usepackage[acronym]{glossaries}
+
+\usepackage{graphicx}
+\graphicspath{{./figures}}
+\usepackage{hyperref}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{definition}
+
+\newcommand{\empy}[1]{{\color{darkorange}\emph{#1}}}
+\newcommand{\empr}[1]{{\color{cardinalred}\emph{#1}}}
+\newcommand{\examplebox}[2]{
+\begin{tcolorbox}[colframe=darkcardinal,colback=boxgray,title=#1]
+#2
+\end{tcolorbox}}
+
+\usetheme{Stanford} 
+\input{./style_files_stanford/my_beamer_defs.sty}
+\logo{\includegraphics[height=0.5in]{logos/HUS-name.jpg}}
+
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\title[Trực quan hóa dữ liệu]{Trực quan hóa văn bản và tài liệu}
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Nội dung}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+
+\begin{document}
+\nocite{*}
+
+\author[Nguyễn Chí Thanh - 21007925]{
+	\begin{tabular}{c} 
+	\Large
+	Nguyễn Chí Thanh \\
+    \footnotesize \href{mailto:nguyenchithanh\_sdh21@hus.edu.vn}{nguyenchithanh\_sdh21@hus.edu.vn}
+\end{tabular}
+\vspace{-4ex}}
+
+\institute{
+	\vskip 5pt
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[height=0.75in]{logos/HUS-logo.jpg}
+		\end{subfigure}%
+		~ 
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[height=0.75in]{logos/MIM-logo.png}
+		\end{subfigure}
+	\end{figure}
+	\vskip 10pt	
+	Đại học Quốc Gia Hà Nội \\
+	Trường đại học Khoa học tự nhiên\\
+	Khoa Toán - Cơ - Tin học
+	\vskip 3pt
+}
+
+\begin{noheadline}
+\begin{frame} \maketitle \end{frame}
+\end{noheadline}
+    
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{itemize subitem}[circle]
+
+\begin{frame}{Nội dung}
+    \tableofcontents
+\end{frame}
+
+\section{Các cấp biểu diễn văn bản}
+
+\begin{frame}{Cấp độ từ vựng}
+    
+\end{frame}
+
+\section{Mô hình không gian vector}
+\end{document}
+
