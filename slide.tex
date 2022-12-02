@@ -520,6 +520,11 @@
 		\item Hình \ref{fig:13}, từng cột biểu diễn một file mã nguồn với chiều cao biểu thị kích thước của file.
 		\item Nếu như file dài hơn màn hình, nó sẽ tiếp tục được biểu diễn ở cột tiếp theo.
 		\item Trong biểu diễn của SeeSoft, từng hàng biểu diễn một dòng code.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Trực quan hóa phần mềm}
+	\begin{itemize}
 		\item Vì số lượng dòng quá lớn cho một hàng, nên mỗi dòng được biểu diễn bởi một điểm ảnh trong hàng ngang.
 		\item Màu sắc được sử dụng để biểu thị số lần được gọi.
 		\item Dòng càng màu đỏ thì dòng này càng được gọi nhiều, được gọi là điểm nóng (key hotspot).
@@ -530,7 +535,7 @@
 \begin{frame}{Trực quan hóa phần mềm}
 	\begin{figure}[h!]
         \centering
-        \includegraphics[width=0.70\textwidth]{13.png}
+        \includegraphics[width=0.5\textwidth]{13.png}
         \caption{Trực quan hóa sử dụng phần mềm SeeSoft. Các hình chữ nhật biểu diễn các file mã nguồn.
         Kích thước của các hình chữ nhật trong từng cột tương ứng với độ dài của file mã nguồn, và màu sắc của từng dòng biểu diễn các tham số liên quan đến việc sửa đổi \cite{108}.}
         \label{fig:13}
@@ -539,7 +544,42 @@
 
 \subsection{Trực quan hóa kết quả truy vấn}
 
+\begin{frame}{Trực quan hóa kết quả truy vấn}
+	\begin{itemize}
+		\item Marti Hearst đã phát triển một công cụ trực quan hóa kết quả truy vấn đơn giản về cơ bản tương tự như của \cite{232} được gọi là TileBars \cite{178}.
+		hiển thị một số thống kê liên quan đến thuật ngữ, bao gồm tần suất và phân phối của thuật ngữ, độ dài của tài liệu, xếp hạng dựa trên thuật ngữ và sức mạnh của xếp hạng.
+		\item  Mỗi tài liệu của tập kết quả được biểu diễn bằng một hình chữ nhật, trong đó chiều rộng biểu thị chiều dài tương dối của tài liệu và các ô vuông xếp chồng tương ứng với các đoạn văn bản (hình \ref{fig:14}).
+		\item Mỗi hàng của ngắn xếp đại diện cho tập các thuật ngữ truy vấn và mức độ tối của hình vuông thể hiện tần suất của các thuật ngữ trong số các thuật ngữ tương ứng.
+		\item Tiêu đề và những từ mở đầu từ tài liệu xuất hiện bên cạnh TileBar.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Trực quan hóa kết quả truy vấn}
+	\begin{itemize}
+		\item  Mỗi hình chữ nhật lớn biểu diễn một văn bản, mỗi hình vuông trong tài liệu biểu diễn một đoạn văn bản.
+		\item Ô càng tối thì tập hợp thuật ngữ truy vấn càng có tần suất lớn.
+		\item Điều này tạo ra một biểu diễn thu gọn và cung cấp các phản hồi về cấu trúc tài liệu phản ánh độ dài tương đối của tài liệu,
+		tần suất của thuật ngữ truy vấn và phân phối của các thuật ngữ truy vấn.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Trực quan hóa kết quả truy vấn}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\textwidth]{14.png}
+        \caption{Trực quan hóa kết quả truy vấn TileBars.
+        Mỗi hình chữ nhật lớn biểu thị một tài liệu, mỗi hình vuông bên trong tài liệu biển diễn một đoạn văn bản.
+        Ô càng tối thì tập hợp thuật ngữ truy vấn có tần suất càng lớn \cite{178}.}
+        \label{fig:14}
+    \end{figure}
+\end{frame}
+
 \subsection{Trực quan hóa tập tài liệu theo thời gian}
+
+\begin{frame}{Trực quan hóa tập tài liệu theo thời gian}
+	
+\end{frame}
 
 \subsection{Biểu diễn các mối quan hệ}
 
