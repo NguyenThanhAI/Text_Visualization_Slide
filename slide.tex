@@ -330,30 +330,212 @@
     \end{figure}
 \end{frame}
 
+\begin{frame}{Đám mây từ (Wordcloud)}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{5.png}
+        \caption{Một Wordle được tạo bởi dịch vụ miễn phí wordle.net \cite{118}.
+        Kích thước của các từ tương ứng với tần suất của từ trong tài liệu}
+        \label{fig:5}
+    \end{figure}
+\end{frame}
+
 
 \begin{frame}{Đám mây từ (Wordcloud)}
-	Đám mây từ (hình \ref{fig:4}), còn được gọi là đám mây văn bản hoặc đám mây thẻ, là bố của các các token mà được tô màu và định cỡ hiển thị theo tần suất xuất hiện của chúng trong một tài liệu.
+	\begin{itemize}
+		\item Đám mây từ (hình \ref{fig:4}), còn được gọi là đám mây văn bản hoặc đám mây thẻ, là bố của các các token mà được tô màu và định cỡ hiển thị theo tần suất xuất hiện của chúng trong một tài liệu.
+		\item Có một vài biến thể, ví dụ là Wordle
+	\end{itemize}
 \end{frame}
 
 \subsection{WordTree}
 
+\begin{frame}{WordTree}
+	\begin{itemize}
+		\item Trực quan hóa WordTree \cite{450} là một biểu diễn trực quan của cả tần số thuật ngữ cũng như ngữ cảnh của thuật ngữ (hình \ref{fig:6}).
+		\item Kích thước được sử dụng để đại diện cho thuật ngữ hoặc tần suất của cụm từ.
+		\item Gốc của cây là một từ hoặc cụm từ do người dùng chỉ định và các nhánh biểu diễn các ngữ cảnh khác nhau mà từ hoặc cụm từ được sử dụng trong tài liệu.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{WordTree}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{6.png}
+        \caption{Hình ảnh WordTree được tạo bởi dịch vụ miễn phí ManyEyes \cite{196}.
+        Các nhánh của cây đại diện cho các ngữ cảnh khác nhau theo sau một từ gốc hoặc cụm từ gốc trong tài liệu}
+        \label{fig:6}
+    \end{figure}
+\end{frame}
+
 \subsection{TextArc}
+
+\begin{frame}{TextArc}
+	\begin{itemize}
+		\item Ta có thể mở rộng biểu diễn của phân phối từ bằng cách hiển thị kết nối.
+		\item Có nhiều cách để tính toán kết nối giữa các từ.
+		\item TextArc \cite{312} là một biểu diễn trực quan về các thuật ngữ liên quan đến dòng văn bản mà nó xuất hiện (hình \ref{fig:7}).
+		\item Mỗi từ trong văn bản được vẽ theo thứ tự xung quan một elip dưới dạng các dòng nhỏ với độ lệch nhẹ ở đầu.
+		\item Cũng như trong đám mấy văn bản, các từ với tần suất cao hơn được vẽ lớn hơn và sáng hơn.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{TextArc}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\textwidth]{7.png}
+        \caption{Một hình ảnh TextArc được tạo ra sử dụng truyện "Alice in Wonderland".
+        Các từ xuất hiện trong toàn bộ các phần trong tài liệu được đặt ở giữa TextArc, trong khi các từ chỉ xuất hiện trong vài phần cụ thể được đặt gần viền hơn.}
+        \label{fig:7}
+    \end{figure}
+\end{frame}
 
 \subsection{Sơ đồ vòng cung (Arc Diagrams)}
 
+\begin{frame}{Sơ đồ vòng cung (Arc Diagrams)}
+	\begin{itemize}
+		\item Sơ đồ vòng cung là trực quan hóa tập trung vào việc hiển thị sự lặp lại trong văn bản.
+		\item Các dãy con lặp đi lặp lại được xác định và được nối với nhau bằng các cung nửa hình tròn.
+		\item Độ dày của các cung biểu diễn độ dài của các dãy con và độ cao của các cung biểu diễn khoảng cách giữa các dãy con.
+		\item Hình \ref{fig:8} hiển thị "Bach’s Minuet in G Major", trực quan hóa mô hình cổ điển của điệu nhảy Minuet.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Sơ đồ vòng cung (Arc Diagrams)}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{8.png}
+        \caption{Một hình ảnh sơ đồ vòng cung của "Bach’s Minuet in G Major".
+        Các dãy lặp lại được kết nối bằng một đường cong nửa hình tròn. \cite{451}}
+        \label{fig:8}
+    \end{figure}
+\end{frame}
+
 \subsection{Dấu ấn văn học (Literature Fingerprinting)}
+
+\begin{frame}{Dấu ấn văn học (Literature Fingerprinting)}
+	\begin{itemize}
+		\item Dấu ấn văn học là một phương pháp trực quan hóa các đặc trưng được sử dụng để thể hiện các đặc tính của văn bản \cite{222}.
+		\item Thay vì chỉ tính toán một giá trị đặc trưng hoặc một vector cho toàn bộ văn bản (đây là điều hay thường được thực hiện), ta tính toán một dãy các giá trị đặc trưng từng văn bản và hiển thị chúng cho người dùng dưới dạng dấu ấn đặc trưng của tài liệu.
+		\item Thông tin cấu trúc của tài liệu được dùng để trực quan hóa tài liệu trên nhiều cấp độ khác nhau của độ phân giải.
+		\item Dấu ấn văn học được áp dụng cho bài toán xác nhận quyền tác giả để thể hiện khả năng phân biệt của các độ đo tiêu chuẩn được giả định để nắm bắt được phong cách sáng tác của một tác giả (hình \ref{fig:9}).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dấu ấn văn học (Literature Fingerprinting)}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{9.png}
+        \caption{Kỹ thuật lấy dấu ấn văn học. Dấu ấn văn học được sử dụng để phân tích nhiều độ đo văn bản để phân biệt tác giả của tài liệu.
+        Từng điểm ảnh biểu diễn một khối văn bản, các điểm ảnh được ghép lại thành các cuốn sách.
+        Màu các điểm ảnh được ảnh xạ từ các giá trị đặc trưng, trong trường hợp này là độ dài trung bình của câu.
+        Nếu một độ đo có khả năng phân biệt giữa hai tác giả, các sách ở hàng đầu tiên được viết bởi Jack London và các sách còn lại được viết bởi Mark Twain. \cite{222}}
+        \label{fig:9}
+    \end{figure}
+\end{frame}
+
 
 \section{Trực quan hóa tập tài liệu}
 
+\begin{frame}{Trực quan hóa tập tài liệu}
+	\begin{itemize}
+		\item Trong hầu hết các trường hợp trực quan hóa tập tài liệu, mục tiêu đặt ra là đặt các tài liệu tương tự nhau ở gần nhau và các tài liệu khác nhau cách xa nhau.
+		\item Đây là bài toán thường có độ phức tạp $O(n^2)$.
+		\item Ta tính toán sự giống nhau giữa tất cả từng cặp tài liệu và xác định bố cục.
+		\item Cách tiếp cẩn phổ biến là đồ thị, phân cụm (k-means, phân cấp, tối đa hóa kỳ vọng (EM), vector hỗ trợ) và bản đồ tự tổ chức.
+	\end{itemize}
+\end{frame}
+
 \subsection{Bản đồ tự tồ chức}
+
+\begin{frame}{Bản đồ tự tồ chức}
+	\begin{itemize}
+		\item Bản đồ tự tổ chức (SOM) \cite{248} là một thuật toán học không giám sát bằng cách sử dụng một tập các nút thường là 2 chiều, vị trí mà tài liệu sẽ được đặt.
+		\item Từng nút có một vector tưng ứng với cùng số chiều với vector đầu vào (các vector tài liệu) được sử dụng để huấn luyện bản đồ.
+		\item Ta khởi tạo các nút của SOM, thường có các trọng số ngẫu nhiên.
+		\item Ta chọn một vector ngẫu nhiên từ các vector đầu vào và tính toán khoảng cách của nó đến từng mỗi nút khác.
+		\item Ta điều chỉnh trọng số của các nút gần hất (trong một bán kính cụ thể), làm cho mỗi nút gần hơn tới vector đầu vào,
+		với trọng số đầu vào cao hơn tương ứng với nút được chọn gần nhất.
+		\item Khi ta lặp qua các vector đầu vào, bán kính sẽ nhỏ hơn.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Bản đồ tự tồ chức}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\textwidth]{10.png}
+        \caption{Bố cục bản đồ tự tổ chức của mục bản tin Phần Lan.
+        Các nhãn hiển thị các khu vực chủ đề và màu sắc biểu thị số lượng các tài liệu tương ứng với chủ đề, với các vùng càng sáng chứa nhiều tài liệu hơn \cite{454}.}
+        \label{fig:10}
+    \end{figure}
+\end{frame}
 
 \subsection{Hình nền chủ đề}
 
+\begin{frame}{Hình nền chủ đề}
+	\begin{itemize}
+		\item Hình nền chủ đề là bản tóm tắt của corpora sử dụng phong cảnh 3 chiều trừu tượng, trong đó chiều cao và màu sắc được sử dụng để biểu diễn mật độ của các tài liệu tương tự giống nhau.
+		\item Một ví dụ được minh họa trong hình \ref{fig:11} từ Pacific Northwest National Labs \cite{407} đại diện cho các bài báo được trực quan hóa dưới dạng hình nền chủ đề.
+		\item Các ngọn núi cao hơn biểu thị tần suất chủ đề cao hơn trong kho tài liệu (chiều cao tỷ lệ thuận với số lượng tài liệu liên quan đến chủ đề).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Hình nền chủ đề}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\textwidth]{11.png}
+        \caption{Một hình nền chủ đề từ PNNL sử dụng chiều cao để biểu diễn tần suất xuất hiện của các chủ đề trong các bài báo. (Hình ảnh được in từ \cite{407} với sự cấp phép của  Springer Science and Business Media).}
+        \label{fig:11}
+    \end{figure}
+\end{frame}
+
 \subsection{Thẻ tài liệu}
+
+\begin{frame}{Thẻ tài liệu}
+	\begin{itemize}
+		\item Thẻ tài liệu là một cách trực quan hóa thu gọn (hình \ref{fig:12}) biểu diễn ngữ nghĩa chính của tài liệu dưới dạng hỗn hợp hình ảnh và các thuật ngữ chính quan trọng, tương tự như thẻ trong trò chơi át chủ bài \cite{400}.
+		Các thuật ngữ chính được trích xuất bằng cách sử dụng một cách tiếp cận khai phá văn bản nâng cao dựa trên trích xuất tự động của cấu trúc tài liệu.
+		\item Các thuật ngữ chính được trích xuất bằng cách sử dụng một cách tiếp cận khai phá văn bản nâng cao dựa trên trích xuất tự động của cấu trúc tài liệu.
+		\item Phân phối màu của ảnh được dùng để phân loại hình ảnh vào các lớp (lớp 1: ảnh chụp/ảnh kết xuất, lớp 2: sơ đồ/bản phác thảo/đồ thị, lớp 3: bảng) và hiển thị ít nhất một đại diện từ mỗi lớp không rỗng.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Thẻ tài liệu}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\textwidth]{12.png}
+        \caption{Kho tài liệu của hội nghị IEEE InfoVis 2008 được biểu diễn bằng một ma trận các thẻ tài liệu.
+        Tuần suất của các thuật ngữ trên từng trang được hiển thị ở bên tay phải của thẻ lại liệu (màu càng đỏ thể hiện tần suất càng cao, ta có thể thấy ở tài liệu thứ nhất ở hàng thứ 3) \cite{400}.}
+        \label{fig:12}
+    \end{figure}
+\end{frame}
 
 \section{Các kỹ thuật trực quan hóa văn bản mở rộng}
 
 \subsection{Trực quan hóa phần mềm}
+
+\begin{frame}{Trực quan hóa phần mềm}
+	\begin{itemize}
+		\item Eick và các cộng sự đã phát triển một công cụ trực quan hóa có tên là SeeSoft \cite{108} giúp trực quan hóa số liệu thống kê cho từng dòng code (tuổi và số thay đổi, lập trình viên, ngày tháng).
+		\item Hình \ref{fig:13}, từng cột biểu diễn một file mã nguồn với chiều cao biểu thị kích thước của file.
+		\item Nếu như file dài hơn màn hình, nó sẽ tiếp tục được biểu diễn ở cột tiếp theo.
+		\item Trong biểu diễn của SeeSoft, từng hàng biểu diễn một dòng code.
+		\item Vì số lượng dòng quá lớn cho một hàng, nên mỗi dòng được biểu diễn bởi một điểm ảnh trong hàng ngang.
+		\item Màu sắc được sử dụng để biểu thị số lần được gọi.
+		\item Dòng càng màu đỏ thì dòng này càng được gọi nhiều, được gọi là điểm nóng (key hotspot).
+		\item Một dòng màu xanh thể hiện ít được gọi hơn.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Trực quan hóa phần mềm}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.70\textwidth]{13.png}
+        \caption{Trực quan hóa sử dụng phần mềm SeeSoft. Các hình chữ nhật biểu diễn các file mã nguồn.
+        Kích thước của các hình chữ nhật trong từng cột tương ứng với độ dài của file mã nguồn, và màu sắc của từng dòng biểu diễn các tham số liên quan đến việc sửa đổi \cite{108}.}
+        \label{fig:13}
+    \end{figure}
+\end{frame}
 
 \subsection{Trực quan hóa kết quả truy vấn}
 
