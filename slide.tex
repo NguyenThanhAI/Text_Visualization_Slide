@@ -222,7 +222,7 @@
 
 \begin{frame}{Tính toán các trọng số}
 	Mã giả ở thuật toán \ref{alg:COMPUTE-TFIDF} tính toán các vector tf-idf cho từng tài liệu.
-	\resizebox{5cm}{!}{%
+	\resizebox{3.5cm}{!}{%
 	\begin{algorithm}[H]
         \DontPrintSemicolon
         $termFrequencies \gets \emptyset$\; \tcp{Tra cứu bảng đếm số lần thuật ngữ/từ xuất hiện cho tên tài liệu}
@@ -262,6 +262,7 @@
     \end{algorithm}
 	}
 \end{frame}
+
 
 \begin{frame}
 	\begin{figure}[h!]
@@ -463,7 +464,7 @@
 \begin{frame}{Bản đồ tự tồ chức}
 	\begin{figure}[h!]
         \centering
-        \includegraphics[width=0.4\textwidth]{10.png}
+        \includegraphics[width=0.3\textwidth]{10.png}
         \caption{Bố cục bản đồ tự tổ chức của mục bản tin Phần Lan.
         Các nhãn hiển thị các khu vực chủ đề và màu sắc biểu thị số lượng các tài liệu tương ứng với chủ đề, với các vùng càng sáng chứa nhiều tài liệu hơn \cite{454}.}
         \label{fig:10}
@@ -578,10 +579,103 @@
 \subsection{Trực quan hóa tập tài liệu theo thời gian}
 
 \begin{frame}{Trực quan hóa tập tài liệu theo thời gian}
-	
+	\begin{itemize}
+		\item ThemeRiver \cite{173} còn được gọi là biểu đồ luồng, là một kỹ thuật trực quan hóa các thay đổi chủ đề theo thời gian trong tập tài liệu (hình \ref{fig:15}).
+		\item Hình ảnh trực quan này giả định rằng dữ liệu đầu vào thay đổi theo thời gian.
+		\item Các chủ đề được thể hiện trực quan dưới dạng các dải màu nằm ngang có độ dày theo chiều dọc ở một vị trí theo chiều ngang nhất định biểu diễn tần suất của tại một thời điểm cụ thể.
+	\end{itemize}
+\end{frame}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.35\textwidth]{15.png}
+	\caption{Biểu đồ luồng (ThemeRiver) miêu tả các bài phát biểu trong đêm bầu cử của một số ứng viên khác nhau cho cuộc bầu cử ở Canada \cite{173}.}
+	\label{fig:15}
+\end{figure}
+
+\begin{frame}{Trực quan hóa tập tài liệu theo thời gian}
+	\begin{itemize}
+		\item Jigsaw là một công cụ để trực quan hóa và khám phá kho văn bản \cite{155}.
+		\item Chế độ xem lịch định vị các đối tượng tài liệu dựa trên các thực thể ngày tháng được xác định trong văn bản.
+		\item Khi người dùng ấn vào một tài liệu, các thực thể sẽ xuất hiện trong tài liệu đó sẽ được hiển thị (hình \ref{fig:16}.)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Trực quan hóa tập tài liệu theo thời gian}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{16.png}
+        \caption{Các bài báo được trình bày dưới dạng xem lịch Jigsaw, dựa trên các thực thể ngày được trích xuất \cite{155}.}
+        \label{fig:16}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Trực quan hóa tập tài liệu theo thời gian}
+	\begin{itemize}
+		\item Wanner và các đồng sự phát triển một công cụ phân tích trực quan để tiến hành phân tihcs cảm xúc bán tự động từ các nguồn tin tức lớn.
+		\item Mặc dù công cụ này tự động thu thập và phân tích từ nguồn RSS liên quan đến các từ có quan điểm tích cực và tiêu cực, nhưng việc phân tích tin tức đòi hỏi khắt khe hơn trong việc tìm ra các xu hướng, phát hiện các điểm đặc biệt và đưa các sự kiện vào ngữ cảnh chuyển giao cho các chuyên gia.
+		\item Minh họa trong hình \ref{fig:17}, mỗi mục tin tức đơn lẻ được biểu diễn bằng một đối tượng trực quan và được vẽ trên trục thời gian nằm ngang theo thời gian xuất bản của tin này.
+		\item Hình dạng và màu sắc của mỗi mục tin tiết lộ thông tin về danh mục mà tin này thuộc về và sự dịch chuyển theo phương thẳng đứng cho biết liệu tin này có ý nghĩa tích cực (dịch chuyển lên trên) hay tiêu cực (dịch chuyển xuống dưới).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Trực quan hóa tập tài liệu theo thời gian}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{17.png}
+        \caption{Trực quan hóa phân tích cảm xúc \cite{440},
+        Các mục tin tức được vẽ dọc theo trục thời gian.
+        Hình dạng và màu sắc cho biết từng mục thuộc về danh mục nào và vị trí theo trục thẳng đứng phụ thuộc vào điểm số cảm xúc được xác định tự động của mục đó.
+        Các đối tượng trực giác biểu diễn các mục tin tức được tô màu bán trong suốt để làm cho các mục chồng vào nhau dễ phân biệt hơn.}
+        \label{fig:17}
+    \end{figure}
 \end{frame}
 
 \subsection{Biểu diễn các mối quan hệ}
+
+\begin{frame}{Biểu diễn các mối quan hệ}
+	\begin{itemize}
+		\item Jigsaw \cite{155} cũng bao gồm chế độ xem đồ thị thực thể (hình \ref{fig:18}) trong đó người dùng có thể điều hướng đồ thị của các thực thể và tài liệu có liên quan.
+		\item Trong Jigsaw, các thực thể được kết nối với các tài liệu mà chúng xuất hiện.
+		\item Chế độ xem đồ thị của Jigsaw không hiển thị toàn bộ tập tài liệu nhưng cho phép người dùng mở rộng dần dần đồ thị bằng cách chọn các tài liệu và thực thể mà họ quan tâm (hình \ref{fig:19})
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Biểu diễn các mối quan hệ}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{18.png}
+        \caption{Chế độ xem đồ thị Jigsaw, thể hiện các kết nối giữa các thực thể và tài liệu được đặt tên \cite{155}.}
+        \label{fig:18}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Biểu diễn các mối quan hệ}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{19.png}
+        \caption{Chế độ xem đồ thị phân cụm trong Jigsaw lọc các tài liệu có các thực thể cụ thể.
+        Di chuột qua một thực thể xác định dữ liệu về tài liệu.
+        Màu sắc đại diện cho giá trị tokens.}
+        \label{fig:19}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Biểu diễn các mối quan hệ}
+	\begin{itemize}
+		\item Chế độ xem danh sách trong Jigsaw là chế độ xem thay thế cho chế độ xem đồ thị ở chỗ cho phép người dùng khám phá những mối quan hệ giữa nhiều loại thực thể và tài liệu.
+		\item Được minh họa trong hình \ref{fig:20}, khi người dùng chọn các mục mà họ quan tâm, chế độ xem danh sách vẽ các đường kết nối thể hiện mối quan hệ của chúng.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Biểu diễn các mối quan hệ}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{20.png}
+        \caption{Chế độ xem danh sách Jigsaw, hiển thị các kết nối giữa mọi người (bên trái), các địa điểm (giữa) và các tổ chức (bên phải) \cite{155}.}
+        \label{fig:20}
+    \end{figure}
+\end{frame}
 
 \section{Tài liệu tham khảo}
 \begin{frame}[allowframebreaks]{Tài liệu tham khảo}
