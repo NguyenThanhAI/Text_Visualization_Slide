@@ -153,6 +153,16 @@
     
 \end{frame}
 
+\begin{frame}{Cấp độ từ vựng}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{lexical.png}
+        \caption{Minh họa biểu diễn cấp độ từ vựng}
+        \label{fig:lexical}
+    \end{figure}
+    
+\end{frame}
+
 \subsection{Cấp độ cú pháp}
 
 \begin{frame}{Cấp độ cú pháp}
@@ -162,12 +172,30 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Cấp độ cú pháp}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{syntatic.jpg}
+        \caption{Minh họa biểu diễn cấp độ cú pháp}
+        \label{fig:syntatic}
+    \end{figure}
+\end{frame}
+
 \subsection{Cấp độ ngữ nghĩa}
 
 \begin{frame}{Cấp độ ngữ nghĩa}
 	\begin{itemize}
 		\item Cấp độ ngữ nghĩa bao gồm việc trích xuất xuất các ý nghĩa và quan hệ giữa các phần tri thức thu được từ các cấu trúc được xác định ở cấp độ cú pháp.
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Cấp độ ngữ nghĩa}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{semantic.png}
+        \caption{Minh họa biểu diễn cấp độ ngữ nghĩa}
+        \label{fig:semantic}
+    \end{figure}
 \end{frame}
 
 \section{Mô hình không gian vector}
@@ -280,6 +308,7 @@
         \caption{Minh họa của các vector của các thuật ngữ trong nhiều tài liệu, bao gồm giá trị tf-idf.}
         \label{fig:1}
     \end{figure}
+	Cài đặt: sklearn.feature\_extraction.text.TfidfVectorizer
 \end{frame}
 
 \subsection{Định luật Zipf}
@@ -365,6 +394,7 @@
 		\item Trực quan hóa WordTree \cite{450} là một biểu diễn trực quan của cả tần số thuật ngữ cũng như ngữ cảnh của thuật ngữ (hình \ref{fig:6}).
 		\item Kích thước được sử dụng để đại diện cho thuật ngữ hoặc tần suất của cụm từ.
 		\item Gốc của cây là một từ hoặc cụm từ do người dùng chỉ định và các nhánh biểu diễn các ngữ cảnh khác nhau mà từ hoặc cụm từ được sử dụng trong tài liệu.
+		\item \url https://www.jasondavies.com/wordtree/
 	\end{itemize}
 \end{frame}
 
@@ -387,6 +417,7 @@
 		\item TextArc \cite{312} là một biểu diễn trực quan về các thuật ngữ liên quan đến dòng văn bản mà nó xuất hiện (hình \ref{fig:7}).
 		\item Mỗi từ trong văn bản được vẽ theo thứ tự xung quan một elip dưới dạng các dòng nhỏ với độ lệch nhẹ ở đầu.
 		\item Cũng như trong đám mấy văn bản, các từ với tần suất cao hơn được vẽ lớn hơn và sáng hơn.
+		\item \url http://vallandingham.me/textarc/
 	\end{itemize}
 \end{frame}
 
@@ -468,6 +499,15 @@
 		với trọng số đầu vào cao hơn tương ứng với nút được chọn gần nhất.
 		\item Khi ta lặp qua các vector đầu vào, bán kính sẽ nhỏ hơn.
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Bản đồ tự tồ chức}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{Self-Organizing-Maps-Network.png}
+        \caption{Minh họa cấu trúc bản đồ tự tổ chức}
+        \label{fig:SOMs}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Bản đồ tự tồ chức}
@@ -689,6 +729,21 @@
         \caption{Chế độ xem danh sách Jigsaw, hiển thị các kết nối giữa mọi người (bên trái), các địa điểm (giữa) và các tổ chức (bên phải) \cite{155}.}
         \label{fig:20}
     \end{figure}
+\end{frame}
+
+\section{Một số thư viện xử lý tài liệu và văn bản}
+
+\begin{frame}{Một số thư viện xử lý tài liệu và văn bản}
+	\begin{itemize}
+		\item NLTK
+		\item Gensim
+		\item Spacy
+		\item TextBlob
+		\item CoreNLP
+		\item Pattern
+		\item Vocabulary
+		\item PyNLPl
+	\end{itemize}
 \end{frame}
 
 \section{Tài liệu tham khảo}
