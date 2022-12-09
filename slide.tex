@@ -148,7 +148,6 @@
 	\begin{itemize}
 		\item Cấp độ từ vựng liên qua đến việc biến đổi một chuỗi các ký tự sang một dãy các thực thể nguyên tử được gọi là \textit{tokens}.
 		\item Bộ phân tích từ vựng xử lý dãy các ký tự với một bộ quy tắc nhất định thành một dãy các tokens mới có thể được sử dụng cho những phân tích sâu hơn.
-		\item Tokens có thể bao gồm các ký tự, các ký tự n-grams, các từ, các gốc từ, các từ vựng, các cụm từ.
 	\end{itemize}
     
 \end{frame}
@@ -425,10 +424,10 @@
 \begin{frame}{Các nhiệm vụ sử dụng mô hình không gian vector}
 	\begin{itemize}
 		\item Mô hình không gian vector, khi đi cùng với một độ đo khoảng cách cho phép ta thực hiện nhiều tác vụ hữu ích.
-		\item Ta có thể sử dụng tf-idf và mô hình không gian vector để nhận diện các tài liệu cần được quan tâm đặc biệt.
-		\item Ví dụ, mô hình không gian vector, với việc sử dụng một số độ đo khoảng cách, sẽ cho phép ta trả lời câu hỏi tài liệu nào giống với một tài liệu cụ thể cho trước.
+		\item Ta có thể sử dụng tf-idf và mô hình không gian vector để nhận diện các tài liệu cần được quan tâm.
+		\item Trong mô hình không gian vector, với việc sử dụng một số độ đo khoảng cách, sẽ cho phép ta trả lời câu hỏi tài liệu nào giống với một tài liệu cụ thể cho trước.
 		\item Làm thế nào để giúp người dùng hiểu được ý nghĩa của toàn bộ corpus.
-		\item Biến đổi các tà liệu này thành các vector, sau đó thực thi các thuật toán dựa trên các nhiệm vụ đang được quan tâm (đo độ tương tự, tìm kiếm, phân cụm) và thực hiện trực quan hóa.
+		\item Biến đổi các tài liệu này thành các vector, sau đó thực thi các thuật toán dựa trên các nhiệm vụ đang được quan tâm (đo độ tương tự, tìm kiếm, phân cụm) và thực hiện trực quan hóa.
 	\end{itemize}
 \end{frame}
 
@@ -489,11 +488,9 @@
 
 \begin{frame}{TextArc}
 	\begin{itemize}
-		\item Ta có thể mở rộng biểu diễn của phân phối từ bằng cách hiển thị kết nối.
-		\item Có nhiều cách để tính toán kết nối giữa các từ.
 		\item TextArc \cite{312} là một biểu diễn trực quan về các thuật ngữ liên quan đến dòng văn bản mà nó xuất hiện (hình \ref{fig:7}).
 		\item Mỗi từ trong văn bản được vẽ theo thứ tự xung quan một elip dưới dạng các dòng nhỏ với độ lệch nhẹ ở đầu.
-		\item Cũng như trong đám mấy văn bản, các từ với tần suất cao hơn được vẽ lớn hơn và sáng hơn.
+		\item Cũng như trong đám mây văn bản, các từ với tần suất cao hơn được vẽ lớn hơn và sáng hơn.
 		\item \url http://vallandingham.me/textarc/
 	\end{itemize}
 \end{frame}
@@ -620,7 +617,7 @@
 
 \begin{frame}{Thẻ tài liệu}
 	\begin{itemize}
-		\item Thẻ tài liệu là một cách trực quan hóa thu gọn (hình \ref{fig:12}) biểu diễn ngữ nghĩa chính của tài liệu dưới dạng hỗn hợp hình ảnh và các thuật ngữ chính quan trọng, tương tự như thẻ trong trò chơi át chủ bài \cite{400}.
+		\item Thẻ tài liệu là một cách trực quan hóa thu gọn (hình \ref{fig:12}) biểu diễn ngữ nghĩa chính của tài liệu dưới dạng hỗn hợp hình ảnh và các thuật ngữ chính quan trọng \cite{400}.
 		Các thuật ngữ chính được trích xuất bằng cách sử dụng một cách tiếp cận khai phá văn bản nâng cao dựa trên trích xuất tự động của cấu trúc tài liệu.
 		\item Các thuật ngữ chính được trích xuất bằng cách sử dụng một cách tiếp cận khai phá văn bản nâng cao dựa trên trích xuất tự động của cấu trúc tài liệu.
 		\item Phân phối màu của ảnh được dùng để phân loại hình ảnh vào các lớp (lớp 1: ảnh chụp/ảnh kết xuất, lớp 2: sơ đồ/bản phác thảo/đồ thị, lớp 3: bảng) và hiển thị ít nhất một đại diện từ mỗi lớp không rỗng.
@@ -673,8 +670,8 @@
 
 \begin{frame}{Trực quan hóa kết quả truy vấn}
 	\begin{itemize}
-		\item Marti Hearst đã phát triển một công cụ trực quan hóa kết quả truy vấn đơn giản về cơ bản tương tự như của \cite{232} được gọi là TileBars \cite{178}.
-		hiển thị một số thống kê liên quan đến thuật ngữ, bao gồm tần suất và phân phối của thuật ngữ, độ dài của tài liệu, xếp hạng dựa trên thuật ngữ và sức mạnh của xếp hạng.
+		\item Một công cụ trực quan hóa kết quả truy vấn đơn giản về cơ bản tương tự như của \cite{232} được gọi là TileBars \cite{178}.
+		hiển thị một số thống kê liên quan đến thuật ngữ, bao gồm tần suất và phân phối của thuật ngữ, độ dài của tài liệu.
 		\item  Mỗi tài liệu của tập kết quả được biểu diễn bằng một hình chữ nhật, trong đó chiều rộng biểu thị chiều dài tương dối của tài liệu và các ô vuông xếp chồng tương ứng với các đoạn văn bản (hình \ref{fig:14}).
 		\item Mỗi hàng của ngắn xếp đại diện cho tập các thuật ngữ truy vấn và mức độ tối của hình vuông thể hiện tần suất của các thuật ngữ trong số các thuật ngữ tương ứng.
 		\item Tiêu đề và những từ mở đầu từ tài liệu xuất hiện bên cạnh TileBar.
@@ -738,7 +735,7 @@
 
 \begin{frame}{Trực quan hóa tập tài liệu theo thời gian}
 	\begin{itemize}
-		\item Wanner và các đồng sự phát triển một công cụ phân tích trực quan để tiến hành phân tihcs cảm xúc bán tự động từ các nguồn tin tức lớn.
+		\item Wanner và các đồng sự phát triển một công cụ phân tích trực quan để tiến hành phân tích cảm xúc bán tự động từ các nguồn tin tức lớn.
 		\item Mặc dù công cụ này tự động thu thập và phân tích từ nguồn RSS liên quan đến các từ có quan điểm tích cực và tiêu cực, nhưng việc phân tích tin tức đòi hỏi khắt khe hơn trong việc tìm ra các xu hướng, phát hiện các điểm đặc biệt và đưa các sự kiện vào ngữ cảnh chuyển giao cho các chuyên gia.
 	\end{itemize}
 \end{frame}
