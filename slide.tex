@@ -301,14 +301,83 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}{Tính toán các trọng số}
 	\begin{figure}[h!]
         \centering
-        \includegraphics[width=0.8\textwidth]{1.png}
+        \includegraphics[width=0.7\textwidth]{1.png}
         \caption{Minh họa của các vector của các thuật ngữ trong nhiều tài liệu, bao gồm giá trị tf-idf.}
         \label{fig:1}
     \end{figure}
 	Cài đặt: sklearn.feature\_extraction.text.TfidfVectorizer
+\end{frame}
+
+\begin{frame}{Word2Vec \cite{mikolov2013efficient}}
+	\begin{itemize}
+		\item Có một kho tài liệu lớn.
+		\item Mỗi từ được biểu diễn bởi một vector
+		\item Đi qua từng vị trí $t$ trong kho dữ liệu, có một từ trung tâm $c$ và các từ ngữ cảnh $o$.
+		\item Sử dụng độ tương đồng cho $c$ và $o$ để tính xác suất của $o$ khi cho $c$.
+		\item Điều chỉnh các vector (của các từ) để cực đại hóa xác suất này
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Word2Vec}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{word2vec.png}
+        \caption{Ví dụ cửa sổ trượt để tính $p(w_{t + j} \vert w_t)$}
+        \label{fig:word2vec}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Word2Vec}
+	Với từng vị trí $t=1,\dots, T$, dự đoán các từ ngữ cảnh trong một cửa sổ có kích thước $m$ khi cho trước từ trung từ $w_t$.
+
+	\begin{equation*}
+		L(\boldsymbol{\theta}) = \prod_{t=1}^T \prod_{\substack{-m \leq j \leq m\\j \neq 0}} p(w_{t+j} \vert w_t; \boldsymbol{\theta})
+	\end{equation*}
+
+	Hàm mục tiêu:
+
+	\begin{equation*}
+		J(\boldsymbol{\theta}) = -\dfrac{1}{T}\log L (\boldsymbol{\theta})=-\dfrac{1}{T} \sum_{t=1}^T \sum_{\substack{-m \leq j \leq m \\ j \neq 0}} \log p(w_{t + j} \vert w_t ; \boldsymbol{\theta})
+	\end{equation*}
+\end{frame}
+
+\begin{frame}{Word2Vec}
+	Để tính $p(w_{t + j} \vert w_t ; \boldsymbol{\theta})$ ta sử dụng hai vector cho một từ $w$:
+	\begin{itemize}
+		\item $v_w$ khi $w$ là từ trung tâm.
+		\item $u_w$ khi $w$ là từ ngữ cảnh.
+	\end{itemize}
+	Khi cho một từ trung tâm $c$ và một từ ngữ cảnh $o$:
+
+	\begin{equation*}
+		p(o \vert c) = \dfrac{\exp\big( u_o^T v_c \big)}{\sum_{w \in V} \exp \big( u_w^T v_c \big)}
+	\end{equation*}
+\end{frame}
+
+\begin{frame}{Word2Vec}
+	\begin{itemize}
+		\item $\boldsymbol{\theta}$ là vector tham số của mô hình.
+		\item Mỗi vector có $d$ chiều, $V$ từ vựng
+	\end{itemize}
+
+	\begin{equation*}
+		\boldsymbol{\theta} = \begin{pmatrix}
+			v_{aardvark} \\ v_a \\ \vdots \\ v_{zebra} \\ u_{aardvark} \\ u_a \\ \vdots \\ u_{zebra}
+		\end{pmatrix} \in \mathbb{R}^{2dV}
+	\end{equation*}
+\end{frame}
+
+
+\begin{frame}{Word2Vec}
+	\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{word2vec-visualization.png}
+        \caption{Minh họa các vector của các từ trên không gian 2 chiều bằng UMAP \cite{mcinnes2018umap}}
+        \label{fig:word2vec-visualization}
+    \end{figure}
 \end{frame}
 
 \subsection{Định luật Zipf}
